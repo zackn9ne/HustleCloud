@@ -11,13 +11,14 @@ function loadSoundcloud() {
 //}
 
 //function updateIcon() {
-  chrome.browserAction.setIcon({path:"icon" + current + ".png"});
+  chrome.browserAction.setIcon({path:"play.png"});
   current++;
 
   if (current > max)
     current = min;
 }
 
+//onclose listener change icon back
 chrome.browserAction.onClicked.addListener(loadSoundcloud || updateIcon);
 updateIcon();
 //loadSoundcloud();
